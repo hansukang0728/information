@@ -16,10 +16,7 @@
 
 1. `wordcards/` 폴더가 바뀌어 푸시되면 **Actions → 낱말카드 안드로이드 빌드** 가 실행됩니다.
 2. 실행 결과 화면 아래 **Artifacts → wordcards-android** 를 받아 압축을 풀면 `wordcards-debug.apk` 가 있습니다.
-3. 휴대폰에서 바로 받고 싶으면 `wordcards-v1.0.0` 같은 태그를 푸시하세요. **Releases** 에 APK가 올라가서 폰 브라우저로 받을 수 있습니다.
-   ```bash
-   git tag wordcards-v1.0.0 && git push origin wordcards-v1.0.0
-   ```
+3. 빌드가 끝나면 `package.json` 의 version 이름(예: `wordcards-v1.0.0`)으로 **Releases** 에 APK가 올라가서 폰 브라우저로 받을 수 있습니다. 새 버전을 내려면 `package.json` 의 `version` 을 올려 푸시하세요. (`wordcards-v*` 태그를 직접 푸시해도 됩니다.)
 4. 폰에서 APK를 열고 "출처를 알 수 없는 앱 설치"를 허용하면 설치됩니다.
 
 > 아이에게 줄 때는 안드로이드의 **앱 고정(화면 고정)** 기능을 켜 두면 아이가 앱 밖으로 나가지 못합니다. (설정 → 보안 → 앱 고정)
