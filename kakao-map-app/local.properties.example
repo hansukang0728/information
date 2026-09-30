@@ -1,0 +1,4 @@
+# 이 파일을 local.properties 로 복사한 뒤 카카오 개발자 콘솔의 키를 넣으세요.
+# local.properties 는 git에 올라가지 않습니다. (Android Studio가 sdk.dir 줄을 자동으로 추가합니다)
+KAKAO_NATIVE_APP_KEY=여기에_네이티브_앱_키
+KAKAO_REST_API_KEY=여기에_REST_API_키

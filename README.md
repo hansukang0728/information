@@ -37,3 +37,8 @@ public/              화면 (HTML/CSS/JS)
 - 시세는 **네이버 증권의 비공식 엔드포인트**에서 가져옵니다. 증권사 계좌 없이 쓸 수 있지만, 공식 API가 아니어서 예고 없이 바뀌거나 막힐 수 있습니다.
 - **개인 참고용**으로만 사용하세요. 시세를 다른 사람에게 서비스하거나 재배포하면 이용약관 및 거래소 시세 라이선스 문제가 생길 수 있습니다.
 - 나중에 증권사 계좌를 만들면 `providers/kis.js` 처럼 같은 함수(`getQuotes`, `getIndices`, `search`, `getChart`)를 가진 파일을 만들고 `server.js`의 import만 바꾸면 됩니다. 한국투자증권 KIS Developers API는 웹소켓 실시간 시세를 공식적으로 제공합니다.
+
+---
+
+## 다른 프로젝트: 주변 찾기 안드로이드 앱
+`kakao-map-app/` 폴더에 카카오맵으로 내 주변 가게를 업종별로 찾는 안드로이드 앱이 있습니다. 설정과 실행 방법은 [kakao-map-app/README.md](kakao-map-app/README.md)를 보세요.

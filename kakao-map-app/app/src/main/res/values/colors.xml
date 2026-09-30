@@ -1,0 +1,9 @@
+<resources>
+    <color name="primary">#1E6FD9</color>
+    <color name="pin">#F08A00</color>
+    <color name="pin_selected">#E0312B</color>
+    <color name="my_location">#1E6FD9</color>
+    <color name="item_selected">#1A1E6FD9</color>
+    <color name="icon_background">#FEE500</color>
+    <color name="icon_foreground">#3C1E1E</color>
+</resources>

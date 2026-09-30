@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">주변 찾기</string>
+    <string name="keyword_hint">장소·업종 검색 (예: 헬스장, 네일샵)</string>
+    <string name="search">검색</string>
+    <string name="research_here">이 지역에서 다시 검색</string>
+    <string name="my_location">내 위치</string>
+    <string name="call">전화</string>
+    <string name="detail">상세 정보</string>
+</resources>
