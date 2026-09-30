@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#FFF9EF" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="낱말카드" />
+  <title>아기 낱말카드</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 홈: 주제 고르기 -->
+  <section id="home" class="screen active">
+    <header class="home-head">
+      <h1>낱말카드</h1>
+      <button id="parent-btn" class="parent-btn" aria-label="부모 설정 (길게 누르기)">⚙️<span class="ring"></span></button>
+    </header>
+    <div class="mode-row">
+      <button class="mode active" data-mode="cards">🃏 카드 보기</button>
+      <button class="mode" data-mode="quiz">🔍 찾기 놀이</button>
+    </div>
+    <div id="categories" class="categories"></div>
+  </section>
+
+  <!-- 카드 보기 -->
+  <section id="cards" class="screen">
+    <header class="bar">
+      <button class="icon-btn home-btn" aria-label="처음으로">🏠</button>
+      <div id="progress" class="progress"></div>
+      <span class="icon-btn spacer"></span>
+    </header>
+    <div class="stage">
+      <button id="card" class="card" aria-live="polite">
+        <span id="card-emoji" class="emoji"></span>
+        <span id="card-word" class="word"></span>
+        <span id="card-sound" class="sound"></span>
+      </button>
+    </div>
+    <footer class="nav">
+      <button id="prev" class="nav-btn" aria-label="이전">◀</button>
+      <button id="next" class="nav-btn" aria-label="다음">▶</button>
+    </footer>
+  </section>
+
+  <!-- 찾기 놀이 -->
+  <section id="quiz" class="screen">
+    <header class="bar">
+      <button class="icon-btn home-btn" aria-label="처음으로">🏠</button>
+      <button id="quiz-prompt" class="quiz-prompt">🔊 <span></span></button>
+      <span id="stars" class="stars"></span>
+    </header>
+    <div id="choices" class="choices"></div>
+  </section>
+
+  <div id="cheer" class="cheer" aria-hidden="true"></div>
+
+  <!-- 부모 설정 -->
+  <dialog id="settings">
+    <form method="dialog">
+      <h2>부모 설정</h2>
+      <label><input type="checkbox" name="autoSpeak" /> 카드가 바뀌면 자동으로 읽어주기</label>
+      <label><input type="checkbox" name="speakSound" /> 의성어도 읽어주기 (멍멍, 부릉부릉…)</label>
+      <label><input type="checkbox" name="showWord" /> 글자 보여주기</label>
+      <label><input type="checkbox" name="shuffle" /> 카드 순서 섞기</label>
+      <label>찾기 놀이 그림 수
+        <select name="choices">
+          <option value="2">2개 (처음 시작)</option>
+          <option value="3">3개</option>
+          <option value="4">4개</option>
+        </select>
+      </label>
+      <label>읽는 속도
+        <input type="range" name="rate" min="0.5" max="1.2" step="0.1" />
+      </label>
+      <button id="test-voice" type="button" class="secondary">🔊 목소리 들어보기</button>
+      <p class="hint">18개월 전후에는 그림 2개로 시작해 익숙해지면 늘려 주세요. 하루 10~15분 정도, 아이와 함께 이름을 말해 주는 것이 가장 효과적이에요.</p>
+      <button value="close" class="primary">닫기</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

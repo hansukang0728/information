@@ -1,0 +1,232 @@
+import { CATEGORIES } from './words.js';
+
+const $ = (s) => document.querySelector(s);
+const ALL = { id: 'all', name: '모두', icon: '🌈', color: '#FFE3F1',
+  words: CATEGORIES.flatMap((c) => c.words.map((w) => ({ ...w, color: c.color }))) };
+
+// ---------- 설정 (브라우저에 저장) ----------
+const DEFAULTS = { autoSpeak: true, speakSound: true, showWord: true, shuffle: false, choices: 2, rate: 0.8 };
+let settings = { ...DEFAULTS };
+try { Object.assign(settings, JSON.parse(localStorage.getItem('wordcards.settings') || '{}')); } catch {}
+const saveSettings = () => { try { localStorage.setItem('wordcards.settings', JSON.stringify(settings)); } catch {} };
+
+// ---------- 음성 (브라우저 내장 TTS) ----------
+let koVoice = null;
+function pickVoice() {
+  const voices = speechSynthesis.getVoices().filter((v) => v.lang?.toLowerCase().startsWith('ko'));
+  // 가능하면 자연스러운(온라인/고품질) 목소리를 고릅니다.
+  koVoice = voices.find((v) => /natural|online|premium|enhanced|yuna|sunhi/i.test(v.name)) || voices[0] || null;
+}
+if ('speechSynthesis' in window) {
+  pickVoice();
+  speechSynthesis.addEventListener?.('voiceschanged', pickVoice);
+}
+function speak(text) {
+  if (!('speechSynthesis' in window) || !text) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'ko-KR';
+  if (koVoice) u.voice = koVoice;
+  u.rate = Number(settings.rate);
+  u.pitch = 1.15;
+  speechSynthesis.speak(u);
+}
+const sayWord = (w) => speak(settings.speakSound && w.sound ? `${w.word}. ${w.sound}!` : w.word);
+
+// ---------- 화면 전환 ----------
+function show(id) {
+  document.querySelectorAll('.screen').forEach((s) => s.classList.toggle('active', s.id === id));
+  if (id === 'home') speechSynthesis?.cancel();
+}
+document.querySelectorAll('.home-btn').forEach((b) => b.addEventListener('click', () => show('home')));
+
+const shuffled = (arr) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+};
+
+// ---------- 홈 ----------
+let mode = 'cards';
+document.querySelectorAll('.mode').forEach((b) => b.addEventListener('click', () => {
+  mode = b.dataset.mode;
+  document.querySelectorAll('.mode').forEach((m) => m.classList.toggle('active', m === b));
+}));
+
+const catBox = $('#categories');
+for (const cat of [ALL, ...CATEGORIES]) {
+  const b = document.createElement('button');
+  b.className = 'cat';
+  b.style.background = cat.color;
+  b.innerHTML = `<span class="ic">${cat.icon}</span><span>${cat.name}</span>`;
+  b.addEventListener('click', () => (mode === 'cards' ? startCards(cat) : startQuiz(cat)));
+  catBox.append(b);
+}
+
+// ---------- 카드 보기 ----------
+const cardEl = $('#card');
+let deck = [], idx = 0, deckColor = '';
+
+function startCards(cat) {
+  deck = settings.shuffle || cat === ALL ? shuffled(cat.words) : [...cat.words];
+  deckColor = cat.color;
+  idx = 0;
+  show('cards');
+  renderCard();
+}
+
+function renderCard() {
+  const w = deck[idx];
+  $('#card-emoji').textContent = w.emoji;
+  $('#card-word').textContent = w.word;
+  $('#card-sound').textContent = settings.speakSound && w.sound ? w.sound : '';
+  cardEl.classList.toggle('hide-word', !settings.showWord);
+  cardEl.style.setProperty('--cat', w.color || deckColor);
+  cardEl.setAttribute('aria-label', w.word);
+  $('#progress').innerHTML = deck.map((_, i) => `<i class="${i === idx ? 'on' : ''}"></i>`).join('');
+  if (settings.autoSpeak) sayWord(w);
+}
+
+let animating = false;
+function go(step) {
+  if (animating) return;
+  animating = true;
+  cardEl.classList.add(step > 0 ? 'out-left' : 'out-right');
+  setTimeout(() => {
+    idx = (idx + step + deck.length) % deck.length;  // 끝에 가면 처음으로 돌아갑니다
+    cardEl.classList.add('no-anim');
+    cardEl.classList.remove('out-left', 'out-right');
+    renderCard();
+    requestAnimationFrame(() => { cardEl.classList.remove('no-anim'); animating = false; });
+  }, 220);
+}
+$('#next').addEventListener('click', () => go(1));
+$('#prev').addEventListener('click', () => go(-1));
+
+// 카드를 누르면 다시 읽어주고 통통 튀는 효과
+cardEl.addEventListener('click', () => {
+  if (swiped) return;
+  sayWord(deck[idx]);
+  cardEl.classList.remove('bounce');
+  void cardEl.offsetWidth;
+  cardEl.classList.add('bounce');
+});
+
+// 좌우로 밀어서 넘기기
+let startX = null, swiped = false;
+cardEl.addEventListener('pointerdown', (e) => { startX = e.clientX; swiped = false; });
+cardEl.addEventListener('pointerup', (e) => {
+  if (startX === null) return;
+  const dx = e.clientX - startX;
+  startX = null;
+  if (Math.abs(dx) > 60) { swiped = true; go(dx < 0 ? 1 : -1); }
+});
+
+// ---------- 찾기 놀이 ----------
+let pool = [], answer = null, locked = false, stars = 0;
+
+function startQuiz(cat) {
+  pool = cat.words;
+  stars = 0;
+  $('#stars').textContent = '';
+  show('quiz');
+  nextQuestion();
+}
+
+function nextQuestion() {
+  locked = false;
+  const n = Math.min(Number(settings.choices), pool.length);
+  answer = pool[Math.floor(Math.random() * pool.length)];
+  // 같은 이름(예: 과일 배 / 탈것 배)이 선택지에 같이 나오지 않게 합니다.
+  const others = shuffled(pool.filter((w) => w.word !== answer.word)).slice(0, n - 1);
+  const options = shuffled([answer, ...others]);
+
+  const box = $('#choices');
+  const cols = n <= 2 ? (innerWidth > innerHeight ? 2 : 1) : 2;
+  box.style.setProperty('--cols', cols);
+  box.style.setProperty('--size', n <= 2 ? 'min(30vw, 24dvh, 180px)' : 'min(22vw, 18dvh, 140px)');
+  box.innerHTML = '';
+  for (const w of options) {
+    const b = document.createElement('button');
+    b.className = 'choice';
+    b.textContent = w.emoji;
+    b.setAttribute('aria-label', w.word);
+    b.addEventListener('click', () => pick(b, w));
+    box.append(b);
+  }
+  $('#quiz-prompt span').textContent = `${answer.word} 어디 있어?`;
+  setTimeout(() => speak(`${answer.word} 어디 있어?`), 250);
+}
+
+function pick(btn, w) {
+  if (locked) return;
+  if (w === answer) {
+    locked = true;
+    btn.classList.add('correct');
+    document.querySelectorAll('.choice').forEach((c) => c !== btn && c.classList.add('dim'));
+    stars = (stars % 5) + 1;
+    $('#stars').textContent = '⭐'.repeat(stars);
+    speak(`맞았어! ${answer.word}${settings.speakSound && answer.sound ? `, ${answer.sound}` : ''}!`);
+    cheer();
+    setTimeout(nextQuestion, 2200);
+  } else {
+    // 틀려도 혼내지 않고, 고른 그림의 이름을 알려줍니다.
+    btn.classList.remove('wrong');
+    void btn.offsetWidth;
+    btn.classList.add('wrong');
+    speak(`이건 ${w.word}야. ${answer.word} 찾아볼까?`);
+  }
+}
+$('#quiz-prompt').addEventListener('click', () => answer && speak(`${answer.word} 어디 있어?`));
+
+function cheer() {
+  const box = $('#cheer');
+  const bits = ['⭐', '🎉', '💖', '✨', '🌟', '🎈'];
+  for (let i = 0; i < 14; i++) {
+    const s = document.createElement('span');
+    s.textContent = bits[i % bits.length];
+    s.style.left = `${Math.random() * 90}%`;
+    s.style.top = `${60 + Math.random() * 35}%`;
+    s.style.animationDelay = `${Math.random() * 0.3}s`;
+    box.append(s);
+    setTimeout(() => s.remove(), 1800);
+  }
+}
+
+// ---------- 부모 설정: 1.5초 길게 눌러야 열림 (아이가 실수로 못 열게) ----------
+const dlg = $('#settings');
+const form = dlg.querySelector('form');
+const parentBtn = $('#parent-btn');
+let holdTimer = null, holdStart = 0;
+function holdTick() {
+  const p = Math.min((performance.now() - holdStart) / 1500, 1);
+  parentBtn.style.setProperty('--p', p);
+  if (p >= 1) { cancelHold(); openSettings(); return; }
+  holdTimer = requestAnimationFrame(holdTick);
+}
+function cancelHold() { cancelAnimationFrame(holdTimer); holdTimer = null; parentBtn.style.setProperty('--p', 0); }
+parentBtn.addEventListener('pointerdown', (e) => { e.preventDefault(); holdStart = performance.now(); holdTimer = requestAnimationFrame(holdTick); });
+['pointerup', 'pointerleave', 'pointercancel'].forEach((ev) => parentBtn.addEventListener(ev, cancelHold));
+
+function openSettings() {
+  for (const [k, v] of Object.entries(settings)) {
+    const el = form.elements[k];
+    if (!el) continue;
+    if (el.type === 'checkbox') el.checked = !!v; else el.value = v;
+  }
+  dlg.showModal();
+}
+form.addEventListener('change', () => {
+  for (const k of Object.keys(DEFAULTS)) {
+    const el = form.elements[k];
+    settings[k] = el.type === 'checkbox' ? el.checked : Number(el.value);
+  }
+  saveSettings();
+});
+$('#test-voice').addEventListener('click', () => speak('안녕! 강아지. 멍멍!'));
+
+// 길게 눌러 메뉴 뜨는 것 막기
+addEventListener('contextmenu', (e) => e.preventDefault());
+
+// ---------- 오프라인 지원 ----------
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

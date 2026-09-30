@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#FFB38A"/>
+  <rect x="116" y="96" width="280" height="330" rx="44" fill="#fff" transform="rotate(-6 256 261)"/>
+  <text x="256" y="300" font-size="190" text-anchor="middle">🐶</text>
+  <text x="256" y="400" font-size="64" text-anchor="middle" font-family="sans-serif" font-weight="700" fill="#3B3355">가</text>
+</svg>

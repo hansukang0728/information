@@ -1,0 +1,14 @@
+{
+  "name": "아기 낱말카드",
+  "short_name": "낱말카드",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF9EF",
+  "theme_color": "#FFF9EF",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
