@@ -11,7 +11,11 @@ val localProps = Properties().apply {
     if (file.exists()) file.inputStream().use { load(it) }
 }
 
-fun localKey(name: String): String = localProps.getProperty(name, "").trim()
+// 로컬에서는 local.properties, GitHub Actions 에서는 환경 변수(Secrets)에서 읽습니다.
+fun localKey(name: String): String =
+    (System.getenv(name) ?: localProps.getProperty(name, "")).trim()
+
+val ciKeystore = rootProject.file("release.keystore")
 
 android {
     namespace = "kr.nearby.app"
@@ -28,9 +32,22 @@ android {
         buildConfigField("String", "KAKAO_REST_API_KEY", "\"${localKey("KAKAO_REST_API_KEY")}\"")
     }
 
+    signingConfigs {
+        // GitHub Actions 가 Secrets 로부터 release.keystore 를 만들어 두면 그 키로 서명합니다.
+        if (ciKeystore.exists()) {
+            create("ci") {
+                storeFile = ciKeystore
+                storePassword = localKey("KEYSTORE_PASSWORD")
+                keyAlias = "nearby"
+                keyPassword = localKey("KEYSTORE_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            if (ciKeystore.exists()) signingConfig = signingConfigs.getByName("ci")
         }
     }
 

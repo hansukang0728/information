@@ -1,0 +1,80 @@
+# 2단계: APK 를 빌드해서 GitHub Releases 에 올립니다.
+# - Actions 탭 → "2. APK 빌드·배포" → Run workflow : 테스트 빌드 (APK 는 Artifacts 에)
+# - v1.0.0 같은 태그를 push : 정식 배포 (Releases 페이지에 APK 등록)
+name: "2. APK 빌드·배포"
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    working-directory: kakao-map-app
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Secrets 확인
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KAKAO_NATIVE_APP_KEY: ${{ secrets.KAKAO_NATIVE_APP_KEY }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+        run: |
+          missing=""
+          [ -z "$KEYSTORE_BASE64" ] && missing="$missing KEYSTORE_BASE64"
+          [ -z "$KAKAO_NATIVE_APP_KEY" ] && missing="$missing KAKAO_NATIVE_APP_KEY"
+          [ -z "$KAKAO_REST_API_KEY" ] && missing="$missing KAKAO_REST_API_KEY"
+          if [ -n "$missing" ]; then
+            echo "::error::Secrets 가 없습니다:$missing — 먼저 '1. 서명 키 만들기' 를 실행하고 Secrets 를 등록하세요."
+            exit 1
+          fi
+
+      - name: 서명 키 준비
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > release.keystore
+          HASH=$(keytool -exportcert -alias nearby -keystore release.keystore -storepass "$KEYSTORE_PASSWORD" \
+            | openssl sha1 -binary | openssl base64)
+          echo "카카오 콘솔에 등록할 키 해시: $HASH"
+          echo "- 카카오 Android 플랫폼 키 해시: \`$HASH\`" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: APK 빌드
+        env:
+          KAKAO_NATIVE_APP_KEY: ${{ secrets.KAKAO_NATIVE_APP_KEY }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon assembleRelease
+          cp app/build/outputs/apk/release/app-release.apk nearby.apk
+
+      - name: APK 를 Artifacts 에 올리기
+        uses: actions/upload-artifact@v4
+        with:
+          name: nearby-apk
+          path: kakao-map-app/nearby.apk
+
+      - name: Releases 에 등록 (태그 push 때만)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: kakao-map-app/nearby.apk
+          generate_release_notes: true

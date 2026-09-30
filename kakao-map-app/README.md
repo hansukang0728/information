@@ -39,6 +39,17 @@
 
 디버그 빌드와 릴리스 빌드는 키 해시가 다르니, 출시할 때는 릴리스 키 해시도 등록해야 합니다.
 
+## Android Studio 없이 GitHub에서 빌드하기
+저장소의 **Actions** 탭에서 APK를 만들어 폰에 바로 설치할 수 있습니다.
+
+1. **"1. 서명 키 만들기"** 워크플로를 한 번 실행합니다. 실행 결과 Summary에 나오는 안내대로
+   Secrets 4개(`KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`, `KAKAO_NATIVE_APP_KEY`, `KAKAO_REST_API_KEY`)를 등록하고,
+   거기에 나오는 **키 해시**를 카카오 콘솔의 Android 플랫폼에 등록합니다.
+2. **"2. APK 빌드·배포"** 워크플로를 실행하면 Artifacts에 `nearby-apk`가 생깁니다.
+   `v1.0.0` 같은 태그를 push하면 **Releases** 페이지에 APK가 올라갑니다.
+3. 폰에서 Releases 페이지를 열어 `nearby.apk`를 내려받고 설치합니다.
+   ("출처를 알 수 없는 앱" 허용이 필요합니다.)
+
 ## 구조
 ```
 app/src/main/java/kr/nearby/app/
