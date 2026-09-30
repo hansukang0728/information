@@ -36,6 +36,8 @@
 
 body {
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
@@ -52,9 +54,13 @@ main, .top, .foot {
 
 .top {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: calc(20px + env(safe-area-inset-top));
   padding-bottom: 12px;
 }
 .top h1 { font-size: 22px; margin: 0; }
@@ -229,6 +235,7 @@ main, .top, .foot {
     width: 100%;
     border-radius: 16px 16px 0 0;
     max-height: 90%;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
   }
 }
 .detail-head { display: flex; justify-content: space-between; align-items: flex-start; }
@@ -267,7 +274,7 @@ main, .top, .foot {
 .stats dt { color: var(--muted); font-size: 13px; }
 .stats dd { margin: 0; font-weight: 600; }
 
-.foot { padding-top: 24px; padding-bottom: 32px; font-size: 12px; text-align: center; }
+.foot { padding-top: 24px; padding-bottom: calc(32px + env(safe-area-inset-bottom)); font-size: 12px; text-align: center; }
 
 @media (max-width: 420px) {
   .index-card { padding: 8px 10px; }

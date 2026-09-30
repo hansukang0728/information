@@ -1,0 +1,10 @@
+# Render(https://render.com) 무료 웹 서비스로 배포하기 위한 설정
+services:
+  - type: web
+    name: stock-board
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: "true"
+    startCommand: npm start
+    healthCheckPath: /

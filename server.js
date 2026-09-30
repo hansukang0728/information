@@ -1,4 +1,5 @@
 import http from 'node:http';
+import { networkInterfaces } from 'node:os';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,6 +14,8 @@ const MIME = {
   '.css': 'text/css; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.json': 'application/json; charset=utf-8',
+  '.webmanifest': 'application/manifest+json; charset=utf-8',
+  '.png': 'image/png',
 };
 
 // 같은 요청이 짧은 시간에 반복되면 네이버에 다시 묻지 않도록 하는 간단한 캐시
@@ -102,4 +105,10 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`주식 보드 실행 중: http://localhost:${PORT}`);
+  // 같은 와이파이의 휴대폰에서 접속할 수 있는 주소
+  for (const addrs of Object.values(networkInterfaces())) {
+    for (const a of addrs ?? []) {
+      if (a.family === 'IPv4' && !a.internal) console.log(`휴대폰에서 접속: http://${a.address}:${PORT}`);
+    }
+  }
 });

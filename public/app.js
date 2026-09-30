@@ -383,5 +383,8 @@ function drawChart(container, points, range) {
 }
 
 // ---------- 시작 ----------
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').catch(() => { /* HTTPS가 아니면 등록되지 않음 */ });
+}
 renderWatchlist();
 refresh();
