@@ -1,0 +1,14 @@
+{
+  "name": "stock-board",
+  "version": "0.1.0",
+  "description": "국내 주식 시세를 간편하게 보는 웹앱",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

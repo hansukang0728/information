@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1115">
+  <title>주식 보드</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e0243a'/><path d='M6 22l7-7 5 5 8-10' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>주식 보드</h1>
+    <div class="status">
+      <span id="market-status" class="badge">-</span>
+      <span id="updated" class="muted"></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="indices" class="indices" aria-label="시장 지수"></section>
+
+    <section class="search" role="search">
+      <input id="search-input" type="search" placeholder="종목명 또는 코드 검색 (예: 삼성전자, 005930)" autocomplete="off" aria-label="종목 검색">
+      <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+    </section>
+
+    <section aria-label="관심 종목">
+      <div class="section-head">
+        <h2>관심 종목</h2>
+        <span id="count" class="muted"></span>
+      </div>
+      <ul id="watchlist" class="watchlist"></ul>
+      <p id="empty" class="empty" hidden>검색해서 관심 종목을 추가해 보세요.</p>
+    </section>
+
+    <p id="error" class="error" hidden></p>
+  </main>
+
+  <div id="detail" class="detail" hidden>
+    <div class="detail-backdrop" data-close></div>
+    <div class="detail-sheet" role="dialog" aria-modal="true" aria-labelledby="detail-name">
+      <div class="detail-head">
+        <div>
+          <h2 id="detail-name"></h2>
+          <span id="detail-code" class="muted"></span>
+        </div>
+        <button class="icon-btn" data-close aria-label="닫기">✕</button>
+      </div>
+      <div class="detail-price">
+        <span id="detail-price" class="big"></span>
+        <span id="detail-change"></span>
+      </div>
+      <div class="tabs" role="tablist">
+        <button role="tab" data-range="1d" aria-selected="true">1일</button>
+        <button role="tab" data-range="3m">3개월</button>
+        <button role="tab" data-range="1y">1년</button>
+      </div>
+      <div id="chart" class="chart"></div>
+      <dl id="detail-stats" class="stats"></dl>
+    </div>
+  </div>
+
+  <footer class="foot muted">
+    시세 출처: 네이버 증권 (비공식) · 개인 참고용이며 투자 판단의 근거로 사용하지 마세요.
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
