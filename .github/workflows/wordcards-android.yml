@@ -1,0 +1,82 @@
+# 낱말카드 안드로이드 앱(APK) 자동 빌드
+# - wordcards/ 가 바뀌어 푸시되면 테스트용 APK를 만들어 Actions 실행 결과의 Artifacts 에 올립니다.
+# - "wordcards-v1.0.0" 같은 태그를 푸시하면 Releases 에 APK를 올려 휴대폰에서 바로 받을 수 있게 합니다.
+# - 플레이 스토어용 서명 키를 Secrets 에 넣어 두면 서명된 AAB 도 함께 만듭니다 (wordcards/README.md 참고).
+name: 낱말카드 안드로이드 빌드
+
+on:
+  push:
+    paths: ['wordcards/**', '.github/workflows/wordcards-android.yml']
+    tags: ['wordcards-v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HAS_KEYSTORE: ${{ secrets.KEYSTORE_BASE64 != '' }}
+    defaults:
+      run:
+        working-directory: wordcards
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: wordcards/package-lock.json
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - uses: android-actions/setup-android@v3
+
+      - name: 패키지 설치 및 웹 파일 복사
+        run: |
+          npm ci
+          npx cap sync android
+
+      - name: 테스트용 APK 빌드
+        working-directory: wordcards/android
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: 서명된 플레이 스토어용 AAB 빌드 (Secrets 가 있을 때만)
+        if: env.HAS_KEYSTORE == 'true'
+        working-directory: wordcards/android
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          VERSION_CODE: ${{ github.run_number }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
+          KEYSTORE_PATH="$RUNNER_TEMP/release.jks" ./gradlew bundleRelease assembleRelease --no-daemon
+
+      - name: 파일 이름 정리
+        run: |
+          mkdir -p out
+          cp android/app/build/outputs/apk/debug/app-debug.apk out/wordcards-debug.apk
+          cp android/app/build/outputs/bundle/release/*.aab out/wordcards-release.aab 2>/dev/null || true
+          cp android/app/build/outputs/apk/release/*-release.apk out/wordcards-release.apk 2>/dev/null || true
+          ls -la out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wordcards-android
+          path: wordcards/out/*
+
+      - name: Releases 에 올리기 (태그일 때)
+        if: startsWith(github.ref, 'refs/tags/wordcards-v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: wordcards/out/*

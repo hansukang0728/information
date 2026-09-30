@@ -10,19 +10,34 @@ let settings = { ...DEFAULTS };
 try { Object.assign(settings, JSON.parse(localStorage.getItem('wordcards.settings') || '{}')); } catch {}
 const saveSettings = () => { try { localStorage.setItem('wordcards.settings', JSON.stringify(settings)); } catch {} };
 
-// ---------- 음성 (브라우저 내장 TTS) ----------
+// ---------- 음성 ----------
+// 안드로이드 앱에서는 WebView가 Web Speech API를 지원하지 않아 기기의 TTS 엔진(네이티브 플러그인)을 씁니다.
+const native = window.Capacitor?.isNativePlatform?.() ? window.Capacitor.Plugins : null;
+const nativeTTS = native?.TextToSpeech;
+
 let koVoice = null;
 function pickVoice() {
   const voices = speechSynthesis.getVoices().filter((v) => v.lang?.toLowerCase().startsWith('ko'));
   // 가능하면 자연스러운(온라인/고품질) 목소리를 고릅니다.
   koVoice = voices.find((v) => /natural|online|premium|enhanced|yuna|sunhi/i.test(v.name)) || voices[0] || null;
 }
-if ('speechSynthesis' in window) {
+if (!nativeTTS && 'speechSynthesis' in window) {
   pickVoice();
   speechSynthesis.addEventListener?.('voiceschanged', pickVoice);
 }
+function stopSpeaking() {
+  if (nativeTTS) nativeTTS.stop().catch(() => {});
+  else if ('speechSynthesis' in window) speechSynthesis.cancel();
+}
 function speak(text) {
-  if (!('speechSynthesis' in window) || !text) return;
+  if (!text) return;
+  if (nativeTTS) {
+    // queueStrategy 0 = 앞의 말을 끊고 바로 읽기
+    nativeTTS.speak({ text, lang: 'ko-KR', rate: Number(settings.rate), pitch: 1.15, queueStrategy: 0 })
+      .catch(() => {});
+    return;
+  }
+  if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'ko-KR';
@@ -34,9 +49,11 @@ function speak(text) {
 const sayWord = (w) => speak(settings.speakSound && w.sound ? `${w.word}. ${w.sound}!` : w.word);
 
 // ---------- 화면 전환 ----------
+let current = 'home';
 function show(id) {
+  current = id;
   document.querySelectorAll('.screen').forEach((s) => s.classList.toggle('active', s.id === id));
-  if (id === 'home') speechSynthesis?.cancel();
+  if (id === 'home') stopSpeaking();
 }
 document.querySelectorAll('.home-btn').forEach((b) => b.addEventListener('click', () => show('home')));
 
@@ -228,5 +245,16 @@ $('#test-voice').addEventListener('click', () => speak('안녕! 강아지. 멍�
 // 길게 눌러 메뉴 뜨는 것 막기
 addEventListener('contextmenu', (e) => e.preventDefault());
 
-// ---------- 오프라인 지원 ----------
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+// ---------- 안드로이드 앱 전용 ----------
+if (native) {
+  // 뒤로 가기: 설정창 닫기 → 홈으로 → (홈에서는) 앱을 백그라운드로. 아이가 실수로 앱을 꺼버리지 않게 합니다.
+  native.App?.addListener('backButton', () => {
+    if (dlg.open) dlg.close();
+    else if (current !== 'home') show('home');
+    else native.App.minimizeApp();
+  });
+  native.App?.addListener('pause', stopSpeaking);
+}
+
+// ---------- 오프라인 지원 (웹 버전만. 앱은 파일이 이미 기기 안에 있음) ----------
+if (!native && 'serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

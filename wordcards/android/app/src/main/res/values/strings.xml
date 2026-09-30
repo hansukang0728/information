@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">아기 낱말카드</string>
+    <string name="title_activity_main">아기 낱말카드</string>
+    <string name="package_name">com.hansukang.wordcards</string>
+    <string name="custom_url_scheme">com.hansukang.wordcards</string>
+</resources>

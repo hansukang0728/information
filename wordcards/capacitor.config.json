@@ -1,0 +1,11 @@
+{
+  "appId": "com.hansukang.wordcards",
+  "appName": "아기 낱말카드",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#FFF9EF"
+  },
+  "plugins": {
+    "StatusBar": { "overlaysWebView": false, "style": "LIGHT", "backgroundColor": "#FFF9EF" }
+  }
+}

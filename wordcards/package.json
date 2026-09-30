@@ -1,0 +1,23 @@
+{
+  "name": "wordcards",
+  "version": "1.0.0",
+  "private": true,
+  "description": "18개월 이상 아이를 위한 낱말카드 (웹 + 안드로이드)",
+  "scripts": {
+    "serve": "python3 -m http.server 8080 -d www",
+    "sync": "cap sync android",
+    "icons": "capacitor-assets generate --android",
+    "apk": "cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/status-bar": "^8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.5.2"
+  }
+}

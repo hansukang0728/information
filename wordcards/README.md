@@ -1,6 +1,6 @@
 # 아기 낱말카드
 
-18개월 이상 아이를 위한 한국어 낱말카드 웹앱입니다. 설치할 것도 서버도 필요 없고, 휴대폰·태블릿 브라우저에서 "홈 화면에 추가"하면 앱처럼 쓸 수 있습니다. 한 번 열어 두면 인터넷 없이도 동작합니다.
+18개월 이상 아이를 위한 한국어 낱말카드 웹앱입니다. **안드로이드 앱(APK)** 으로 설치하거나, 브라우저에서 웹으로 쓸 수 있습니다. 인터넷 없이 동작합니다.
 
 ## 기능
 - **카드 보기**: 큰 그림 + 낱말. 카드를 누르면 읽어주고(예: "강아지. 멍멍!") 통통 튑니다. 좌우로 밀거나 ◀ ▶ 버튼으로 넘깁니다.
@@ -9,25 +9,68 @@
 - **부모 설정**: 톱니바퀴를 1.5초 **길게 눌러야** 열립니다 (아이가 실수로 못 열게). 자동 읽기, 의성어, 글자 표시, 순서 섞기, 찾기 놀이 그림 수(2~4개), 읽는 속도.
 - 아이 손에 맞춘 처리: 큰 버튼, 두 번 탭 확대·당겨서 새로고침·길게 눌러 메뉴 막기, 다크 모드, 움직임 줄이기 설정 존중.
 
-## 실행
-정적 파일이라 아무 웹 서버로 열면 됩니다.
+## 안드로이드 앱
 
+### APK 받기 (가장 쉬운 방법)
+빌드는 GitHub Actions가 자동으로 합니다. 컴퓨터에 안드로이드 스튜디오가 없어도 됩니다.
+
+1. `wordcards/` 폴더가 바뀌어 푸시되면 **Actions → 낱말카드 안드로이드 빌드** 가 실행됩니다.
+2. 실행 결과 화면 아래 **Artifacts → wordcards-android** 를 받아 압축을 풀면 `wordcards-debug.apk` 가 있습니다.
+3. 휴대폰에서 바로 받고 싶으면 `wordcards-v1.0.0` 같은 태그를 푸시하세요. **Releases** 에 APK가 올라가서 폰 브라우저로 받을 수 있습니다.
+   ```bash
+   git tag wordcards-v1.0.0 && git push origin wordcards-v1.0.0
+   ```
+4. 폰에서 APK를 열고 "출처를 알 수 없는 앱 설치"를 허용하면 설치됩니다.
+
+> 아이에게 줄 때는 안드로이드의 **앱 고정(화면 고정)** 기능을 켜 두면 아이가 앱 밖으로 나가지 못합니다. (설정 → 보안 → 앱 고정)
+
+### 앱에서 달라지는 점
+- 음성: 안드로이드 WebView는 브라우저 음성 기능을 지원하지 않아 **기기의 TTS 엔진**을 씁니다. 소리가 안 나면 설정 → 일반 → 텍스트 음성 변환에서 **Google 음성 엔진**과 **한국어 음성 데이터**를 설치하세요.
+- 뒤로 가기 버튼: 설정창 닫기 → 홈으로 → 홈에서는 앱을 끄지 않고 뒤로 보내기만 합니다.
+- 인터넷 권한이 없습니다. 모든 파일이 앱 안에 들어 있습니다.
+
+### 직접 빌드하기 (안드로이드 스튜디오가 있을 때)
+Node.js 22 이상, JDK 21, Android SDK 가 필요합니다.
 ```bash
 cd wordcards
-python3 -m http.server 8080
+npm install
+npx cap sync android     # www/ 의 웹 파일을 앱으로 복사
+npx cap open android     # 안드로이드 스튜디오에서 열어 실행
+# 또는 명령어로: npm run apk  → android/app/build/outputs/apk/debug/app-debug.apk
+```
+`www/` 를 고친 뒤에는 항상 `npx cap sync android` 를 다시 해야 앱에 반영됩니다.
+
+### 아이콘 바꾸기
+`assets/` 의 PNG(icon-only, icon-foreground, icon-background, splash, splash-dark)를 바꾸고 `npm run icons` 를 실행하세요.
+
+### 플레이 스토어에 올리려면
+1. 서명 키를 한 번 만들고 **안전하게 보관**하세요 (잃어버리면 앱 업데이트 불가).
+   ```bash
+   keytool -genkey -v -keystore release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias wordcards
+   base64 -w0 release.jks   # 출력된 문자열을 복사
+   ```
+2. GitHub 저장소 Settings → Secrets and variables → Actions 에 `KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`(wordcards), `KEY_PASSWORD` 를 등록하면 다음 빌드부터 `wordcards-release.aab` 가 함께 만들어집니다.
+3. Google Play Console(등록비 25달러)에서 AAB를 올립니다. 아이 대상 앱은 **가족 정책**(타깃 연령 설정, 개인정보처리방침 URL 등) 심사가 있습니다. 이 앱은 광고·데이터 수집·인터넷 사용이 없어 심사에 유리합니다.
+
+## 웹으로 실행
+```bash
+cd wordcards
+python3 -m http.server 8080 -d www
 # 브라우저에서 http://localhost:8080
 ```
-
-GitHub Pages, Netlify 등에 `wordcards/` 폴더를 그대로 올리면 배포됩니다. (서비스 워커와 음성 기능을 위해 https 또는 localhost 에서 열어야 합니다.)
+GitHub Pages, Netlify 등에 `www/` 폴더를 올리면 웹으로도 쓸 수 있습니다. (음성·오프라인 기능은 https 또는 localhost 에서만 동작)
 
 ## 구조
 ```
-index.html            화면 (홈 / 카드 / 찾기 놀이 / 부모 설정)
-style.css             디자인
-app.js                동작 (음성, 넘기기, 퀴즈, 설정)
-words.js              낱말 데이터 ← 낱말을 추가·수정하려면 여기만 고치면 됩니다
-sw.js                 오프라인 저장
-manifest.webmanifest  홈 화면 앱 설정
+www/                  웹 화면 (앱과 웹이 같이 씀)
+  index.html          화면 (홈 / 카드 / 찾기 놀이 / 부모 설정)
+  style.css           디자인
+  app.js              동작 (음성, 넘기기, 퀴즈, 설정, 안드로이드 뒤로 가기)
+  words.js            낱말 데이터 ← 낱말을 추가·수정하려면 여기만 고치면 됩니다
+  sw.js               오프라인 저장 (웹 전용)
+android/              안드로이드 프로젝트 (Capacitor 로 생성)
+assets/               앱 아이콘·시작 화면 원본
+capacitor.config.json 앱 이름·패키지 이름(com.hansukang.wordcards)
 ```
 
 ## 참고 / 다음 단계 아이디어
