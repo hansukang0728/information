@@ -153,6 +153,8 @@ dialog input[type=checkbox] { width: 22px; height: 22px; }
 dialog select, dialog input[type=range] { flex: 1; min-width: 120px; font: inherit; }
 .hint { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.5; }
 .primary, .secondary { padding: 14px; border-radius: 16px; font-size: 18px; }
+.credits { max-height: 30vh; overflow-y: auto; font-size: 13px; color: var(--muted); line-height: 1.5; }
+.credits a { color: inherit; }
 .primary { background: var(--accent); color: #fff; }
 .secondary { background: var(--bg); }
 

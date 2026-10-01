@@ -258,6 +258,19 @@ form.addEventListener('change', () => {
 });
 $('#test-voice').addEventListener('click', () => speak('안녕! 강아지. 멍멍!'));
 
+// 사진 출처 (위키미디어 공용 사진은 저작자 표시가 필요합니다)
+$('#show-credits').addEventListener('click', async () => {
+  const box = $('#credits');
+  if (!box.hidden) { box.hidden = true; return; }
+  try {
+    const credits = await (await fetch('photos/credits.json')).json();
+    box.innerHTML = '<p>사진: 위키미디어 공용(Wikimedia Commons)</p>' + Object.values(credits)
+      .map((c) => `<div>${c.word} — <a href="${c.page}" target="_blank" rel="noopener">${c.title.replace(/^File:/, '')}</a> · ${c.author || '작자 미상'} · ${c.license}</div>`)
+      .join('');
+  } catch { box.textContent = '사진 출처 정보를 읽지 못했어요.'; }
+  box.hidden = false;
+});
+
 // 길게 눌러 메뉴 뜨는 것 막기
 addEventListener('contextmenu', (e) => e.preventDefault());
 

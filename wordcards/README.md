@@ -37,6 +37,11 @@ npx cap open android     # 안드로이드 스튜디오에서 열어 실행
 ```
 `www/` 를 고친 뒤에는 항상 `npx cap sync android` 를 다시 해야 앱에 반영됩니다.
 
+### 사진
+- 낱말 사진은 `www/photos/<이름>.jpg` 이고, 출처는 `www/photos/CREDITS.md` 와 앱의 부모 설정 → 사진 출처 보기에 있습니다. 모두 위키미디어 공용의 자유 라이선스(CC0·퍼블릭 도메인·CC BY·CC BY-SA) 사진입니다.
+- 사진을 바꾸려면 같은 이름의 정사각형 JPG로 덮어쓰면 됩니다(640×640 권장). 사진 파일이 없으면 이모지로 보입니다.
+- 위키미디어에서 다시 고르려면: `photos/queries.json` 의 검색어를 고치고 `photos/selection.json` 에서 그 낱말을 지운 뒤 푸시하면 **낱말카드 사진 가져오기** 워크플로우가 후보 미리보기를 `photos/candidates/` 에 커밋합니다. 고른 파일 제목을 `selection.json` 에 적고 다시 푸시하면 사진을 받아 `www/photos/` 에 넣습니다.
+
 ### 아이콘 바꾸기
 `assets/` 의 PNG(icon-only, icon-foreground, icon-background, splash, splash-dark)를 바꾸고 `npm run icons` 를 실행하세요.
 
@@ -72,6 +77,5 @@ capacitor.config.json 앱 이름·패키지 이름(com.hansukang.wordcards)
 
 ## 참고 / 다음 단계 아이디어
 - 음성은 기기에 내장된 한국어 TTS를 씁니다. 기기마다 목소리가 다르고, 한국어 음성이 없는 기기에서는 소리가 나지 않을 수 있습니다. 더 자연스럽게 하려면 부모님 목소리 녹음 기능이나 미리 녹음한 mp3를 넣는 방법이 있습니다.
-- 그림은 이모지라 기기(아이폰/안드로이드)마다 모양이 조금 다릅니다. 실제 사진 카드로 바꾸면 18~24개월 아이의 사물 인식에 더 도움이 됩니다.
 - 우리 아이 사진·가족 사진으로 "엄마", "아빠", 아이 이름 카드 만들기
 
