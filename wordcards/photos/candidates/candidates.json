@@ -1,218 +1,146 @@
 {
- "animals_cow": [
-  {
-   "title": "File:CH cow 2.jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/CH_cow_2.jpg/500px-CH_cow_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:CH_cow_2.jpg",
-   "license": "CC BY-SA 3.0",
-   "author": "Daniel Schwen"
-  },
-  {
-   "title": "File:Dairy Cow Silhouette (NIH BioArt 100 - 628685).png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Dairy_Cow_Silhouette_%28NIH_BioArt_100_-_628685%29.png/500px-Dairy_Cow_Silhouette_%28NIH_BioArt_100_-_628685%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Dairy_Cow_Silhouette_(NIH_BioArt_100_-_628685).png",
-   "license": "Public domain",
-   "author": "Courtesy of NIAID\n\nRyan Kissinger"
-  },
-  {
-   "title": "File:Dairy Cow Silhouette (NIH BioArt 100 - 628690).png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Dairy_Cow_Silhouette_%28NIH_BioArt_100_-_628690%29.png/500px-Dairy_Cow_Silhouette_%28NIH_BioArt_100_-_628690%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Dairy_Cow_Silhouette_(NIH_BioArt_100_-_628690).png",
-   "license": "Public domain",
-   "author": "Courtesy of NIAID\n\nRyan Kissinger"
-  },
-  {
-   "title": "File:Dairy Cow (NIH BioArt 99 - 628675).png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Dairy_Cow_%28NIH_BioArt_99_-_628675%29.png/500px-Dairy_Cow_%28NIH_BioArt_99_-_628675%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Dairy_Cow_(NIH_BioArt_99_-_628675).png",
-   "license": "Public domain",
-   "author": "Courtesy of NIAID\n\nRyan Kissinger"
-  },
-  {
-   "title": "File:Dairy Cow (NIH BioArt 99 - 628670).png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Dairy_Cow_%28NIH_BioArt_99_-_628670%29.png/500px-Dairy_Cow_%28NIH_BioArt_99_-_628670%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Dairy_Cow_(NIH_BioArt_99_-_628670).png",
-   "license": "Public domain",
-   "author": "Courtesy of NIAID\n\nRyan Kissinger"
-  },
-  {
-   "title": "File:Dairy cattle in Nova Scotia.jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Dairy_cattle_in_Nova_Scotia.jpg/500px-Dairy_cattle_in_Nova_Scotia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Dairy_cattle_in_Nova_Scotia.jpg",
-   "license": "CC BY 4.0",
-   "author": "Quintin Soloviev"
-  },
-  {
-   "title": "File:A dairy cow in Bemmel.jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/A_dairy_cow_in_Bemmel.jpg/500px-A_dairy_cow_in_Bemmel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:A_dairy_cow_in_Bemmel.jpg",
-   "license": "CC0",
-   "author": "Cultureel Gelderland"
-  },
-  {
-   "title": "File:2025 Michigan State Fair August 2025 10 (Dairy Cattle).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/2025_Michigan_State_Fair_August_2025_10_%28Dairy_Cattle%29.jpg/500px-2025_Michigan_State_Fair_August_2025_10_%28Dairy_Cattle%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:2025_Michigan_State_Fair_August_2025_10_(Dairy_Cattle).jpg",
-   "license": "CC BY-SA 4.0",
-   "author": "Michael Barera"
-  },
-  {
-   "title": "File:2025 Michigan State Fair August 2025 11 (Dairy Cattle).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/2025_Michigan_State_Fair_August_2025_11_%28Dairy_Cattle%29.jpg/500px-2025_Michigan_State_Fair_August_2025_11_%28Dairy_Cattle%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:2025_Michigan_State_Fair_August_2025_11_(Dairy_Cattle).jpg",
-   "license": "CC BY-SA 4.0",
-   "author": "Michael Barera"
-  },
-  {
-   "title": "File:2025 Michigan State Fair August 2025 09 (Dairy Cattle).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/2025_Michigan_State_Fair_August_2025_09_%28Dairy_Cattle%29.jpg/500px-2025_Michigan_State_Fair_August_2025_09_%28Dairy_Cattle%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:2025_Michigan_State_Fair_August_2025_09_(Dairy_Cattle).jpg",
-   "license": "CC BY-SA 4.0",
-   "author": "Michael Barera"
-  }
- ],
  "vehicles_plane": [
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499538).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499538%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499538%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499538).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYQ MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Lufthansa_Boeing_747-8_D-ABYQ_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYQ_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYQ_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499126).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499126%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499126%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499126).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYA MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Lufthansa_Boeing_747-8_D-ABYA_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYA_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYA_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499351).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499351%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499351%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499351).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYN MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Lufthansa_Boeing_747-8_D-ABYN_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYN_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYN_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499145).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499145%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499145%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499145).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYN MD2.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Lufthansa_Boeing_747-8_D-ABYN_MD2.jpg/500px-Lufthansa_Boeing_747-8_D-ABYN_MD2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYN_MD2.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499250).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499250%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499250%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499250).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYH MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Lufthansa_Boeing_747-8_D-ABYH_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYH_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYH_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499479).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499479%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499479%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499479).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYK MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Lufthansa_Boeing_747-8_D-ABYK_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYK_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYK_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499572).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499572%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499572%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499572).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYP MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Lufthansa_Boeing_747-8_D-ABYP_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYP_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYP_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499672).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499672%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499672%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499672).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYL MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lufthansa_Boeing_747-8_D-ABYL_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYL_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYL_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499212).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499212%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499212%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499212).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYK MD2.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Lufthansa_Boeing_747-8_D-ABYK_MD2.jpg/500px-Lufthansa_Boeing_747-8_D-ABYK_MD2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYK_MD2.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   },
   {
-   "title": "File:The Concord, the supersonic airliner landing in Ben Gurion Airport (FL63499406).jpg",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499406%29.jpg/500px-The_Concord%2C_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_%28FL63499406%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:The_Concord,_the_supersonic_airliner_landing_in_Ben_Gurion_Airport_(FL63499406).jpg",
-   "license": "CC BY 4.0",
-   "author": "IPPA photographer"
+   "title": "File:Lufthansa Boeing 747-8 D-ABYF MD1.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Lufthansa_Boeing_747-8_D-ABYF_MD1.jpg/500px-Lufthansa_Boeing_747-8_D-ABYF_MD1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYF_MD1.jpg",
+   "license": "CC BY-SA 4.0",
+   "author": "Acroterion"
   }
  ],
  "things_book": [
   {
-   "title": "File:Open Book Tahquitz.JPG",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Open_Book_Tahquitz.JPG/500px-Open_Book_Tahquitz.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Book_Tahquitz.JPG",
+   "title": "File:Cigarette smuggling with a book.JPG",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Cigarette_smuggling_with_a_book.JPG/500px-Cigarette_smuggling_with_a_book.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Cigarette_smuggling_with_a_book.JPG",
    "license": "Public domain",
-   "author": "OMCV"
+   "author": "High Contrast"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 04.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_04.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_04.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_04.png",
-   "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "title": "File:Latin dictionary.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Latin_dictionary.jpg/500px-Latin_dictionary.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Latin_dictionary.jpg",
+   "license": "CC BY-SA 3.0",
+   "author": "Dr. Marcus Gossler"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 02.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_02.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_02.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_02.png",
+   "title": "File:Aufgeschlagenes Buch -- 2020 -- 4204 (bw).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Aufgeschlagenes_Buch_--_2020_--_4204_%28bw%29.jpg/500px-Aufgeschlagenes_Buch_--_2020_--_4204_%28bw%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Aufgeschlagenes_Buch_--_2020_--_4204_(bw).jpg",
    "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "author": "Dietmar Rabich"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 01.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_01.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_01.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_01.png",
+   "title": "File:AC SO Karlspreisübergabe 14.03.2026 Maria Kalesnikava - Eintrag in das goldene Buch I.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/AC_SO_Karlspreis%C3%BCbergabe_14.03.2026_Maria_Kalesnikava_-_Eintrag_in_das_goldene_Buch_I.jpg/500px-AC_SO_Karlspreis%C3%BCbergabe_14.03.2026_Maria_Kalesnikava_-_Eintrag_in_das_goldene_Buch_I.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:AC_SO_Karlspreis%C3%BCbergabe_14.03.2026_Maria_Kalesnikava_-_Eintrag_in_das_goldene_Buch_I.jpg",
    "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "author": "Grunpfnul"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 06.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_06.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_06.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_06.png",
+   "title": "File:Aufgeschlagenes Buch -- 2020 -- 4195-201.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Aufgeschlagenes_Buch_--_2020_--_4195-201.jpg/500px-Aufgeschlagenes_Buch_--_2020_--_4195-201.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Aufgeschlagenes_Buch_--_2020_--_4195-201.jpg",
    "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "author": "Dietmar Rabich"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 03.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_03.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_03.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_03.png",
+   "title": "File:Aufgeschlagenes Buch -- 2020 -- 4195-201 (bw).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Aufgeschlagenes_Buch_--_2020_--_4195-201_%28bw%29.jpg/500px-Aufgeschlagenes_Buch_--_2020_--_4195-201_%28bw%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Aufgeschlagenes_Buch_--_2020_--_4195-201_(bw).jpg",
    "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "author": "Dietmar Rabich"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 08.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_08.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_08.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_08.png",
+   "title": "File:Aufgeschlagenes Buch -- 2020 -- 4204.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Aufgeschlagenes_Buch_--_2020_--_4204.jpg/500px-Aufgeschlagenes_Buch_--_2020_--_4204.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Aufgeschlagenes_Buch_--_2020_--_4204.jpg",
    "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "author": "Dietmar Rabich"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 07.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_07.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_07.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_07.png",
+   "title": "File:Exhibition Temple of Sciences and Muses, Regional Museum in Olomouc 16.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Exhibition_Temple_of_Sciences_and_Muses%2C_Regional_Museum_in_Olomouc_16.jpg/500px-Exhibition_Temple_of_Sciences_and_Muses%2C_Regional_Museum_in_Olomouc_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Exhibition_Temple_of_Sciences_and_Muses,_Regional_Museum_in_Olomouc_16.jpg",
    "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "author": "Jan Kameníček"
   },
   {
-   "title": "File:Open view of the book Zürich POP showing illustrated pages.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Open_view_of_the_book_Z%C3%BCrich_POP_showing_illustrated_pages.png/500px-Open_view_of_the_book_Z%C3%BCrich_POP_showing_illustrated_pages.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_view_of_the_book_Z%C3%BCrich_POP_showing_illustrated_pages.png",
-   "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "title": "File:SRI LANKAN RAILWAYS STATION MASTERS CONTROL ROOM AT FORT STATION COLOMBO SRI LANKA JAN 2013 (8512981442).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/SRI_LANKAN_RAILWAYS_STATION_MASTERS_CONTROL_ROOM_AT_FORT_STATION_COLOMBO_SRI_LANKA_JAN_2013_%288512981442%29.jpg/500px-SRI_LANKAN_RAILWAYS_STATION_MASTERS_CONTROL_ROOM_AT_FORT_STATION_COLOMBO_SRI_LANKA_JAN_2013_%288512981442%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:SRI_LANKAN_RAILWAYS_STATION_MASTERS_CONTROL_ROOM_AT_FORT_STATION_COLOMBO_SRI_LANKA_JAN_2013_(8512981442).jpg",
+   "license": "CC BY-SA 2.0",
+   "author": "calflier001"
   },
   {
-   "title": "File:Open Internal Pages of the Book Diario de Incertidumbre pandemia (Honys Torres) 05.png",
-   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_05.png/500px-Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_%28Honys_Torres%29_05.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "page": "https://commons.wikimedia.org/wiki/File:Open_Internal_Pages_of_the_Book_Diario_de_Incertidumbre_pandemia_(Honys_Torres)_05.png",
-   "license": "CC BY-SA 4.0",
-   "author": "HonysTorresArt"
+   "title": "File:Bookmark front... (4499328965).jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Bookmark_front..._%284499328965%29.jpg/500px-Bookmark_front..._%284499328965%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "page": "https://commons.wikimedia.org/wiki/File:Bookmark_front..._(4499328965).jpg",
+   "license": "CC BY 2.0",
+   "author": "Catherine from Australia"
   }
  ]
 }
