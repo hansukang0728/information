@@ -138,9 +138,10 @@
  "vehicles_plane": {
   "word": "비행기",
   "query": [
-   "airliner landing",
-   "Boeing 737 takeoff",
-   "jet aircraft in flight"
+   "Boeing 747 in flight",
+   "Airbus A380 landing",
+   "incategory:\"Aircraft in flight\"",
+   "Korean Air Boeing 777"
   ]
  },
  "vehicles_boat": {
@@ -198,9 +199,10 @@
  "things_book": {
   "word": "책",
   "query": [
-   "open book",
-   "reading book",
-   "children picture book"
+   "incategory:\"Open books\"",
+   "hardcover books stack",
+   "child reading picture book",
+   "old book pages open"
   ]
  },
  "things_cup": {
