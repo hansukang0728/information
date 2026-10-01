@@ -7,8 +7,9 @@ name: 낱말카드 안드로이드 빌드
 
 on:
   push:
-    paths: ['wordcards/**', '.github/workflows/wordcards-android.yml']
+    branches: ['**']
     tags: ['wordcards-v*']
+    paths: ['wordcards/**', '.github/workflows/wordcards-android.yml']
   workflow_dispatch:
 
 permissions:
