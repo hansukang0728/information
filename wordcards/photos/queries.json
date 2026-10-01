@@ -9,7 +9,11 @@
  },
  "animals_cow": {
   "word": "소",
-  "query": "holstein cow head"
+  "query": [
+   "dairy cow",
+   "cow grazing",
+   "Holstein Friesian"
+  ]
  },
  "animals_pig": {
   "word": "돼지",
@@ -133,7 +137,11 @@
  },
  "vehicles_plane": {
   "word": "비행기",
-  "query": "passenger airplane takeoff"
+  "query": [
+   "airliner landing",
+   "Boeing 737 takeoff",
+   "jet aircraft in flight"
+  ]
  },
  "vehicles_boat": {
   "word": "배",
@@ -189,7 +197,11 @@
  },
  "things_book": {
   "word": "책",
-  "query": "open book pages"
+  "query": [
+   "open book",
+   "reading book",
+   "children picture book"
+  ]
  },
  "things_cup": {
   "word": "컵",

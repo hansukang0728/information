@@ -107,19 +107,26 @@ def candidates():
     per_sheet = 10
     for si in range(0, len(slugs), per_sheet):
         chunk = slugs[si:si + per_sheet]
-        sheet = Image.new('RGB', (160 + N_CANDIDATES * (cell + pad), len(chunk) * (cell + pad)), 'white')
+        sheet = Image.new('RGB', (160 + N_CANDIDATES * 2 * (cell + pad), len(chunk) * (cell + pad)), 'white')
         d = ImageDraw.Draw(sheet)
         for row, slug in enumerate(chunk):
             q = queries[slug]
-            try:
-                cands = search(q['query'], 400, 12)[:N_CANDIDATES]
-            except Exception as e:  # 검색 실패해도 다른 낱말은 계속
-                print(slug, 'search failed:', e)
-                cands = []
+            # query 는 문자열 하나 또는 여러 개(차례로 검색해 후보를 모음)
+            cands, seen = [], set()
+            for term in ([q['query']] if isinstance(q['query'], str) else q['query']):
+                try:
+                    for cnd in search(term, 400, 12):
+                        if cnd['title'] not in seen:
+                            seen.add(cnd['title']); cands.append(cnd)
+                except Exception as e:  # 검색 실패해도 다른 낱말은 계속
+                    print(slug, term, 'search failed:', e)
+                if len(cands) >= N_CANDIDATES * 2:
+                    break
+            cands = cands[:N_CANDIDATES * 2]
             result[slug] = cands
             y = row * (cell + pad)
             d.text((6, y + 6), f'{si + row + 1:02d} {slug}', fill='black', font=font)
-            d.text((6, y + 30), q['query'], fill='gray', font=font)
+            d.text((6, y + 30), str(q['query'])[:22], fill='gray', font=font)
             for ci, c in enumerate(cands):
                 try:
                     img = Image.open(io.BytesIO(get(c['thumb'], binary=True)))
