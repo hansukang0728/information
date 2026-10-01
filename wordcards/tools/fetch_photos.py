@@ -81,8 +81,23 @@ def square(img, size):
     return img.resize((size, size), Image.LANCZOS)
 
 
-def candidates():
+def load_selection():
+    p = ROOT / 'photos/selection.json'
+    return json.loads(p.read_text()) if p.exists() else {}
+
+
+def mode():
+    """모든 낱말이 골라졌으면 fetch, 아니면 candidates"""
     queries = json.loads((ROOT / 'photos/queries.json').read_text())
+    print('fetch' if all(k in load_selection() for k in queries) else 'candidates')
+
+
+def candidates():
+    # 아직 고르지 않은 낱말만 후보를 찾습니다.
+    selected = load_selection()
+    queries = {k: v for k, v in json.loads((ROOT / 'photos/queries.json').read_text()).items() if k not in selected}
+    for old in (ROOT / 'photos/candidates').glob('sheet-*.png'):
+        old.unlink()
     out_dir = ROOT / 'photos/candidates'
     out_dir.mkdir(parents=True, exist_ok=True)
     font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 16)
@@ -138,4 +153,4 @@ def fetch():
 
 
 if __name__ == '__main__':
-    {'candidates': candidates, 'fetch': fetch}[sys.argv[1]]()
+    {'candidates': candidates, 'fetch': fetch, 'mode': mode}[sys.argv[1]]()

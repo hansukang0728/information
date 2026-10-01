@@ -1,62 +1,242 @@
 {
-  "animals_dog":      {"word": "강아지", "query": "golden retriever puppy"},
-  "animals_cat":      {"word": "고양이", "query": "kitten portrait"},
-  "animals_cow":      {"word": "소", "query": "cow pasture"},
-  "animals_pig":      {"word": "돼지", "query": "piglet"},
-  "animals_chicken":  {"word": "닭", "query": "rooster"},
-  "animals_duck":     {"word": "오리", "query": "duck swimming"},
-  "animals_sheep":    {"word": "양", "query": "sheep lamb"},
-  "animals_horse":    {"word": "말", "query": "horse portrait"},
-  "animals_lion":     {"word": "사자", "query": "male lion"},
-  "animals_elephant": {"word": "코끼리", "query": "african elephant"},
-  "animals_rabbit":   {"word": "토끼", "query": "rabbit bunny"},
-  "animals_frog":     {"word": "개구리", "query": "green frog"},
-  "animals_fish":     {"word": "물고기", "query": "goldfish"},
-  "animals_bird":     {"word": "새", "query": "sparrow bird"},
-  "fruits_apple":     {"word": "사과", "query": "red apple"},
-  "fruits_banana":    {"word": "바나나", "query": "banana bunch"},
-  "fruits_strawberry":{"word": "딸기", "query": "strawberry"},
-  "fruits_grape":     {"word": "포도", "query": "grapes bunch"},
-  "fruits_watermelon":{"word": "수박", "query": "watermelon slice"},
-  "fruits_mandarin":  {"word": "귤", "query": "mandarin orange"},
-  "fruits_peach":     {"word": "복숭아", "query": "peach fruit"},
-  "fruits_pear":      {"word": "배", "query": "asian pear nashi"},
-  "food_rice":        {"word": "밥", "query": "bowl of cooked rice"},
-  "food_milk":        {"word": "우유", "query": "glass of milk"},
-  "food_water":       {"word": "물", "query": "glass of water"},
-  "food_bread":       {"word": "빵", "query": "bread loaf"},
-  "food_egg":         {"word": "달걀", "query": "chicken eggs"},
-  "food_cookie":      {"word": "과자", "query": "cookies"},
-  "food_cheese":      {"word": "치즈", "query": "cheese wedge"},
-  "food_carrot":      {"word": "당근", "query": "carrots"},
-  "vehicles_car":     {"word": "자동차", "query": "red car"},
-  "vehicles_bus":     {"word": "버스", "query": "city bus"},
-  "vehicles_train":   {"word": "기차", "query": "steam locomotive"},
-  "vehicles_plane":   {"word": "비행기", "query": "airplane flying"},
-  "vehicles_boat":    {"word": "배", "query": "sailboat"},
-  "vehicles_bicycle": {"word": "자전거", "query": "bicycle"},
-  "vehicles_firetruck":{"word": "소방차", "query": "fire truck"},
-  "vehicles_ambulance":{"word": "구급차", "query": "ambulance"},
-  "body_eye":         {"word": "눈", "query": "human eye close up"},
-  "body_nose":        {"word": "코", "query": "baby nose"},
-  "body_mouth":       {"word": "입", "query": "baby mouth smile"},
-  "body_ear":         {"word": "귀", "query": "human ear"},
-  "body_hand":        {"word": "손", "query": "baby hand"},
-  "body_foot":        {"word": "발", "query": "baby feet"},
-  "things_ball":      {"word": "공", "query": "soccer ball"},
-  "things_shoes":     {"word": "신발", "query": "children sneakers"},
-  "things_hat":       {"word": "모자", "query": "baseball cap"},
-  "things_book":      {"word": "책", "query": "open book"},
-  "things_cup":       {"word": "컵", "query": "mug cup"},
-  "things_spoon":     {"word": "숟가락", "query": "spoon"},
-  "things_clock":     {"word": "시계", "query": "alarm clock"},
-  "things_phone":     {"word": "전화", "query": "smartphone"},
-  "things_teddy":     {"word": "곰인형", "query": "teddy bear"},
-  "nature_sun":       {"word": "해", "query": "sun sky"},
-  "nature_moon":      {"word": "달", "query": "full moon"},
-  "nature_star":      {"word": "별", "query": "starry night sky"},
-  "nature_flower":    {"word": "꽃", "query": "tulip flower"},
-  "nature_tree":      {"word": "나무", "query": "oak tree"},
-  "nature_rain":      {"word": "비", "query": "rain umbrella"},
-  "nature_snowman":   {"word": "눈사람", "query": "snowman"}
+ "animals_dog": {
+  "word": "강아지",
+  "query": "golden retriever puppy"
+ },
+ "animals_cat": {
+  "word": "고양이",
+  "query": "kitten portrait"
+ },
+ "animals_cow": {
+  "word": "소",
+  "query": "holstein cow head"
+ },
+ "animals_pig": {
+  "word": "돼지",
+  "query": "piglet"
+ },
+ "animals_chicken": {
+  "word": "닭",
+  "query": "rooster"
+ },
+ "animals_duck": {
+  "word": "오리",
+  "query": "duck swimming"
+ },
+ "animals_sheep": {
+  "word": "양",
+  "query": "sheep lamb"
+ },
+ "animals_horse": {
+  "word": "말",
+  "query": "horse portrait"
+ },
+ "animals_lion": {
+  "word": "사자",
+  "query": "male lion"
+ },
+ "animals_elephant": {
+  "word": "코끼리",
+  "query": "african elephant"
+ },
+ "animals_rabbit": {
+  "word": "토끼",
+  "query": "rabbit bunny"
+ },
+ "animals_frog": {
+  "word": "개구리",
+  "query": "green frog"
+ },
+ "animals_fish": {
+  "word": "물고기",
+  "query": "goldfish"
+ },
+ "animals_bird": {
+  "word": "새",
+  "query": "sparrow bird"
+ },
+ "fruits_apple": {
+  "word": "사과",
+  "query": "red apple"
+ },
+ "fruits_banana": {
+  "word": "바나나",
+  "query": "ripe yellow bananas"
+ },
+ "fruits_strawberry": {
+  "word": "딸기",
+  "query": "strawberry"
+ },
+ "fruits_grape": {
+  "word": "포도",
+  "query": "red grapes bunch fruit"
+ },
+ "fruits_watermelon": {
+  "word": "수박",
+  "query": "watermelon slice"
+ },
+ "fruits_mandarin": {
+  "word": "귤",
+  "query": "mandarin orange"
+ },
+ "fruits_peach": {
+  "word": "복숭아",
+  "query": "peach fruit"
+ },
+ "fruits_pear": {
+  "word": "배",
+  "query": "asian pear nashi"
+ },
+ "food_rice": {
+  "word": "밥",
+  "query": "bowl of cooked rice"
+ },
+ "food_milk": {
+  "word": "우유",
+  "query": "milk in glass drink"
+ },
+ "food_water": {
+  "word": "물",
+  "query": "drinking glass of water"
+ },
+ "food_bread": {
+  "word": "빵",
+  "query": "loaf of bread baked"
+ },
+ "food_egg": {
+  "word": "달걀",
+  "query": "chicken eggs"
+ },
+ "food_cookie": {
+  "word": "과자",
+  "query": "cookies"
+ },
+ "food_cheese": {
+  "word": "치즈",
+  "query": "gouda cheese"
+ },
+ "food_carrot": {
+  "word": "당근",
+  "query": "carrots"
+ },
+ "vehicles_car": {
+  "word": "자동차",
+  "query": "red car"
+ },
+ "vehicles_bus": {
+  "word": "버스",
+  "query": "city bus"
+ },
+ "vehicles_train": {
+  "word": "기차",
+  "query": "steam locomotive"
+ },
+ "vehicles_plane": {
+  "word": "비행기",
+  "query": "passenger airplane takeoff"
+ },
+ "vehicles_boat": {
+  "word": "배",
+  "query": "sailboat"
+ },
+ "vehicles_bicycle": {
+  "word": "자전거",
+  "query": "bicycle side view"
+ },
+ "vehicles_firetruck": {
+  "word": "소방차",
+  "query": "fire truck"
+ },
+ "vehicles_ambulance": {
+  "word": "구급차",
+  "query": "ambulance"
+ },
+ "body_eye": {
+  "word": "눈",
+  "query": "human eye close up"
+ },
+ "body_nose": {
+  "word": "코",
+  "query": "human nose close up"
+ },
+ "body_mouth": {
+  "word": "입",
+  "query": "baby mouth smile"
+ },
+ "body_ear": {
+  "word": "귀",
+  "query": "human ear close up"
+ },
+ "body_hand": {
+  "word": "손",
+  "query": "baby hand"
+ },
+ "body_foot": {
+  "word": "발",
+  "query": "baby feet"
+ },
+ "things_ball": {
+  "word": "공",
+  "query": "soccer ball on grass"
+ },
+ "things_shoes": {
+  "word": "신발",
+  "query": "children sneakers"
+ },
+ "things_hat": {
+  "word": "모자",
+  "query": "baseball cap"
+ },
+ "things_book": {
+  "word": "책",
+  "query": "open book pages"
+ },
+ "things_cup": {
+  "word": "컵",
+  "query": "mug cup"
+ },
+ "things_spoon": {
+  "word": "숟가락",
+  "query": "spoon"
+ },
+ "things_clock": {
+  "word": "시계",
+  "query": "alarm clock"
+ },
+ "things_phone": {
+  "word": "전화",
+  "query": "smartphone"
+ },
+ "things_teddy": {
+  "word": "곰인형",
+  "query": "teddy bear"
+ },
+ "nature_sun": {
+  "word": "해",
+  "query": "sun sky"
+ },
+ "nature_moon": {
+  "word": "달",
+  "query": "full moon"
+ },
+ "nature_star": {
+  "word": "별",
+  "query": "starry night sky"
+ },
+ "nature_flower": {
+  "word": "꽃",
+  "query": "tulip flower"
+ },
+ "nature_tree": {
+  "word": "나무",
+  "query": "oak tree"
+ },
+ "nature_rain": {
+  "word": "비",
+  "query": "rain umbrella"
+ },
+ "nature_snowman": {
+  "word": "눈사람",
+  "query": "snowman"
+ }
 }

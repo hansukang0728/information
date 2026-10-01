@@ -1,7 +1,7 @@
 # 낱말카드 사진 가져오기
 # wordcards/photos/ 가 바뀌어 푸시되면 실행됩니다.
-# - photos/selection.json 이 없으면(candidates): 낱말마다 후보 사진을 찾아 미리보기 모음을 Artifacts 에 올립니다.
-# - photos/selection.json 이 있으면(fetch): 고른 사진을 받아 www/photos/ 에 넣고 브랜치에 커밋합니다.
+# - 아직 안 고른 낱말이 있으면(candidates): 그 낱말들의 후보 사진을 찾아 미리보기 모음을 브랜치에 커밋합니다.
+# - photos/selection.json 에 모든 낱말이 골라져 있으면(fetch): 사진을 받아 www/photos/ 에 넣고 브랜치에 커밋합니다.
 name: 낱말카드 사진 가져오기
 
 on:
@@ -33,9 +33,7 @@ jobs:
         id: m
         run: |
           mode="${{ inputs.mode }}"
-          if [ -z "$mode" ]; then
-            if [ -f photos/selection.json ]; then mode=fetch; else mode=candidates; fi
-          fi
+          if [ -z "$mode" ]; then mode=$(python3 tools/fetch_photos.py mode); fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
           echo "실행 모드: $mode"
       - run: python3 tools/fetch_photos.py ${{ steps.m.outputs.mode }}
