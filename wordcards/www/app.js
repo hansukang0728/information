@@ -92,9 +92,25 @@ function startCards(cat) {
   renderCard();
 }
 
+// 사진이 있으면 사진을, 없으면(또는 못 읽으면) 이모지를 보여줍니다.
+function picture(el, w, cls) {
+  el.innerHTML = '';
+  if (w.photo) {
+    const img = document.createElement('img');
+    img.src = `photos/${w.photo}.jpg`;
+    img.alt = '';
+    img.draggable = false;
+    img.className = cls;
+    img.onerror = () => { el.textContent = w.emoji; };
+    el.append(img);
+  } else {
+    el.textContent = w.emoji;
+  }
+}
+
 function renderCard() {
   const w = deck[idx];
-  $('#card-emoji').textContent = w.emoji;
+  picture($('#card-emoji'), w, 'photo');
   $('#card-word').textContent = w.word;
   $('#card-sound').textContent = settings.speakSound && w.sound ? w.sound : '';
   cardEl.classList.toggle('hide-word', !settings.showWord);
@@ -166,7 +182,7 @@ function nextQuestion() {
   for (const w of options) {
     const b = document.createElement('button');
     b.className = 'choice';
-    b.textContent = w.emoji;
+    picture(b, w, 'photo');
     b.setAttribute('aria-label', w.word);
     b.addEventListener('click', () => pick(b, w));
     box.append(b);
