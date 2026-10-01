@@ -38,7 +38,11 @@ jobs:
           java-version: 21
           cache: gradle
 
-      - uses: android-actions/setup-android@v3
+      # GitHub 러너에는 Android SDK 가 이미 설치되어 있어 필요한 플랫폼만 추가합니다.
+      - name: Android SDK 플랫폼 설치
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" >/dev/null
 
       - name: 패키지 설치 및 웹 파일 복사
         run: |
