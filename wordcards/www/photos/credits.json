@@ -1,0 +1,422 @@
+{
+ "animals_dog": {
+  "word": "강아지",
+  "title": "File:Callie the golden retriever puppy.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Callie_the_golden_retriever_puppy.jpg",
+  "license": "CC BY 3.0",
+  "author": "MichaelMcPhee"
+ },
+ "animals_cat": {
+  "word": "고양이",
+  "title": "File:Kitten-stare.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Kitten-stare.jpg",
+  "license": "Public domain",
+  "author": "Mrmiscellanious"
+ },
+ "animals_pig": {
+  "word": "돼지",
+  "title": "File:Standing piglet at golden hour in Don Det Laos.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Standing_piglet_at_golden_hour_in_Don_Det_Laos.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Basile Morin"
+ },
+ "animals_chicken": {
+  "word": "닭",
+  "title": "File:Feral rooster on Kauaʻi.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Feral_rooster_on_Kaua%CA%BBi.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Frank Schulenburg"
+ },
+ "animals_duck": {
+  "word": "오리",
+  "title": "File:Wood duck drake vocalizing in Central Park (86815).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Wood_duck_drake_vocalizing_in_Central_Park_(86815).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Rhododendrites"
+ },
+ "animals_sheep": {
+  "word": "양",
+  "title": "File:Sheep, Stodmarsh 6.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Sheep,_Stodmarsh_6.jpg",
+  "license": "CC BY-SA 2.0",
+  "author": "Keven Law, Los Angeles, USA"
+ },
+ "animals_horse": {
+  "word": "말",
+  "title": "File:Horse December 2014-1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Horse_December_2014-1.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Alvesgaspar"
+ },
+ "animals_lion": {
+  "word": "사자",
+  "title": "File:011 The lion king Tryggve in the Serengeti National Park Photo by Giles Laurent.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:011_The_lion_king_Tryggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Giles Laurent"
+ },
+ "animals_elephant": {
+  "word": "코끼리",
+  "title": "File:Elefante africano de sabana (Loxodonta africana), parque nacional de Amboseli, Kenia, 2024-05-22, DD 07.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Elefante_africano_de_sabana_(Loxodonta_africana),_parque_nacional_de_Amboseli,_Kenia,_2024-05-22,_DD_07.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Diego Delso"
+ },
+ "animals_rabbit": {
+  "word": "토끼",
+  "title": "File:Bunny rabbit at Alligator Bay, Beauvoir, France.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Bunny_rabbit_at_Alligator_Bay,_Beauvoir,_France.jpg",
+  "license": "CC BY 2.0",
+  "author": "William Warby"
+ },
+ "animals_frog": {
+  "word": "개구리",
+  "title": "File:Australia green tree frog (Litoria caerulea) crop.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Australia_green_tree_frog_(Litoria_caerulea)_crop.jpg",
+  "license": "Public domain",
+  "author": "LiquidGhoul"
+ },
+ "animals_fish": {
+  "word": "물고기",
+  "title": "File:Carassius wild golden fish 2013 G1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Carassius_wild_golden_fish_2013_G1.jpg",
+  "license": "Public domain",
+  "author": "George Chernilevsky"
+ },
+ "animals_bird": {
+  "word": "새",
+  "title": "File:Passer domesticus (female), Geneve, Switzerland.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_(female),_Geneve,_Switzerland.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Terragio67"
+ },
+ "fruits_apple": {
+  "word": "사과",
+  "title": "File:Red Apple.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg",
+  "license": "CC BY 2.0",
+  "author": "Abhijit Tembhekar from Mumbai, India"
+ },
+ "fruits_strawberry": {
+  "word": "딸기",
+  "title": "File:Garden strawberry (Fragaria × ananassa) single2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Garden_strawberry_(Fragaria_%C3%97_ananassa)_single2.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ivar Leidus"
+ },
+ "fruits_watermelon": {
+  "word": "수박",
+  "title": "File:Watermelon slice, May 2024.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Watermelon_slice,_May_2024.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Ralff Nestor Nacor"
+ },
+ "fruits_mandarin": {
+  "word": "귤",
+  "title": "File:2023 Mandarynki.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:2023_Mandarynki.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Jacek Halicki"
+ },
+ "fruits_peach": {
+  "word": "복숭아",
+  "title": "File:Peach fruit 3.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Peach_fruit_3.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Prianxi"
+ },
+ "fruits_pear": {
+  "word": "배",
+  "title": "File:Pyrus pyrifolia fruit on tree PS 2z LR.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Pyrus_pyrifolia_fruit_on_tree_PS_2z_LR.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "PumpkinSky"
+ },
+ "food_rice": {
+  "word": "밥",
+  "title": "File:A bowl of rice.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:A_bowl_of_rice.jpg",
+  "license": "CC0",
+  "author": "Douglas Perkins"
+ },
+ "food_egg": {
+  "word": "달걀",
+  "title": "File:6-Pack-Chicken-Eggs.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:6-Pack-Chicken-Eggs.jpg",
+  "license": "Public domain",
+  "author": "Evan-Amos"
+ },
+ "food_cookie": {
+  "word": "과자",
+  "title": "File:Koekjestrommel open.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Koekjestrommel_open.jpg",
+  "license": "Public domain",
+  "author": "Pudding4brains"
+ },
+ "food_carrot": {
+  "word": "당근",
+  "title": "File:Carrots at Ljubljana Central Market.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Carrots_at_Ljubljana_Central_Market.JPG",
+  "license": "CC BY 4.0",
+  "author": "domdomegg"
+ },
+ "vehicles_car": {
+  "word": "자동차",
+  "title": "File:Red vintage car in La Habana (10108264664).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_vintage_car_in_La_Habana_(10108264664).jpg",
+  "license": "CC BY 2.0",
+  "author": "Christopher Holt from Saltspring Island, Canada"
+ },
+ "vehicles_bus": {
+  "word": "버스",
+  "title": "File:Landskrona City bus 1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Landskrona_City_bus_1.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Barcaviktor25"
+ },
+ "vehicles_train": {
+  "word": "기차",
+  "title": "File:VRB H 1-2 bei Freibergen.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:VRB_H_1-2_bei_Freibergen.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Kabelleger / David Gubler (http://www.bahnbilder.ch)"
+ },
+ "vehicles_boat": {
+  "word": "배",
+  "title": "File:Zoutelande (NL), Strand, Blick auf die Nordsee -- 2022 -- 4984.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Zoutelande_(NL),_Strand,_Blick_auf_die_Nordsee_--_2022_--_4984.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Dietmar Rabich"
+ },
+ "vehicles_firetruck": {
+  "word": "소방차",
+  "title": "File:Fire engine ZIL-131 2009 G2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Fire_engine_ZIL-131_2009_G2.jpg",
+  "license": "Public domain",
+  "author": "George Chernilevsky"
+ },
+ "vehicles_ambulance": {
+  "word": "구급차",
+  "title": "File:Krankentransportwagen in Passau.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Krankentransportwagen_in_Passau.JPG",
+  "license": "CC BY 3.0 de",
+  "author": "High Contrast"
+ },
+ "body_eye": {
+  "word": "눈",
+  "title": "File:Human eye close up, anterior view.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Human_eye_close_up,_anterior_view.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Rapidreflex"
+ },
+ "body_mouth": {
+  "word": "입",
+  "title": "File:Beautiful Baby Boy is Cute and Positive.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Beautiful_Baby_Boy_is_Cute_and_Positive.jpg",
+  "license": "CC BY 2.0",
+  "author": "epSos.de"
+ },
+ "body_hand": {
+  "word": "손",
+  "title": "File:Baby hand.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Baby_hand.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "பிருந்தா சுப்ரமணி"
+ },
+ "body_foot": {
+  "word": "발",
+  "title": "File:Baby Feet (222051385).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Baby_Feet_(222051385).jpg",
+  "license": "CC BY 2.0",
+  "author": "Dean Johnson"
+ },
+ "things_shoes": {
+  "word": "신발",
+  "title": "File:Stride rite sneakers 10101.jpeg",
+  "page": "https://commons.wikimedia.org/wiki/File:Stride_rite_sneakers_10101.jpeg",
+  "license": "CC BY-SA 4.0",
+  "author": "Zoe1013"
+ },
+ "things_hat": {
+  "word": "모자",
+  "title": "File:Baseball cap.png",
+  "page": "https://commons.wikimedia.org/wiki/File:Baseball_cap.png",
+  "license": "CC BY 4.0",
+  "author": "Original photograph by TexasRebelDerivative version by ReneeWrites"
+ },
+ "things_cup": {
+  "word": "컵",
+  "title": "File:Atom Editor coffee mug, 2025-05-04.jpeg",
+  "page": "https://commons.wikimedia.org/wiki/File:Atom_Editor_coffee_mug,_2025-05-04.jpeg",
+  "license": "CC BY-SA 4.0",
+  "author": "Nylki"
+ },
+ "things_spoon": {
+  "word": "숟가락",
+  "title": "File:Ngaji.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Ngaji.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Akwugo"
+ },
+ "things_clock": {
+  "word": "시계",
+  "title": "File:2023 Budzik Perfect.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:2023_Budzik_Perfect.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Jacek Halicki"
+ },
+ "things_phone": {
+  "word": "전화",
+  "title": "File:Smartphone Use.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Smartphone_Use.jpg",
+  "license": "CC0",
+  "author": "Océanos y dados"
+ },
+ "things_teddy": {
+  "word": "곰인형",
+  "title": "File:2023 Pluszowy miś.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:2023_Pluszowy_mi%C5%9B.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Jacek Halicki"
+ },
+ "nature_sun": {
+  "word": "해",
+  "title": "File:The Sun, Clouds And The Sky. 20.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Sun,_Clouds_And_The_Sky._20.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Sabina Bajracharya"
+ },
+ "nature_moon": {
+  "word": "달",
+  "title": "File:Full Moon Luc Viatour.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Full_Moon_Luc_Viatour.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Luc Viatour"
+ },
+ "nature_star": {
+  "word": "별",
+  "title": "File:Starry night (175371483).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Starry_night_(175371483).jpg",
+  "license": "CC BY 3.0",
+  "author": "Chad Ajamian"
+ },
+ "nature_flower": {
+  "word": "꽃",
+  "title": "File:Tulipa suaveolens floriade to Canberra.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Tulipa_suaveolens_floriade_to_Canberra.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "John O'Neill"
+ },
+ "nature_tree": {
+  "word": "나무",
+  "title": "File:Oak tree in Prospect Park (03833).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Oak_tree_in_Prospect_Park_(03833).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Rhododendrites"
+ },
+ "nature_rain": {
+  "word": "비",
+  "title": "File:A man walks through heavy rain under an umbrella in Kigali, Rwanda. Emmanuel Kwizera.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:A_man_walks_through_heavy_rain_under_an_umbrella_in_Kigali,_Rwanda._Emmanuel_Kwizera.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Emmanuelkwizera"
+ },
+ "nature_snowman": {
+  "word": "눈사람",
+  "title": "File:Bonhomme de neige 2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Bonhomme_de_neige_2.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Sphiiix"
+ },
+ "fruits_banana": {
+  "word": "바나나",
+  "title": "File:Ripe bananas.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Ripe_bananas.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Kellychard kariuki"
+ },
+ "fruits_grape": {
+  "word": "포도",
+  "title": "File:(Red Grapes) A grape is a fruiting berry of the deciduous woody vines of the botanical genus Vitis.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:(Red_Grapes)_A_grape_is_a_fruiting_berry_of_the_deciduous_woody_vines_of_the_botanical_genus_Vitis.JPG",
+  "license": "CC BY-SA 4.0",
+  "author": "David Adam Kess"
+ },
+ "food_milk": {
+  "word": "우유",
+  "title": "File:Glass of Milk (33657535532).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Glass_of_Milk_(33657535532).jpg",
+  "license": "CC BY 2.0",
+  "author": "NIAID"
+ },
+ "food_water": {
+  "word": "물",
+  "title": "File:Glass of water ouside.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Glass_of_water_ouside.jpg",
+  "license": "CC0",
+  "author": "Kurt Kaiser"
+ },
+ "food_bread": {
+  "word": "빵",
+  "title": "File:Herculaneum loaf 2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Herculaneum_loaf_2.jpg",
+  "license": "CC BY 4.0",
+  "author": "Shisma"
+ },
+ "food_cheese": {
+  "word": "치즈",
+  "title": "File:Chesses gouda affinage.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Chesses_gouda_affinage.JPG",
+  "license": "Public domain",
+  "author": "No machine-readable author provided. Alpha.prim~commonswiki assumed (based on copyright claims)."
+ },
+ "vehicles_bicycle": {
+  "word": "자전거",
+  "title": "File:Moor bicycle side view.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Moor_bicycle_side_view.JPG",
+  "license": "CC BY-SA 4.0",
+  "author": "User:Javier Carro"
+ },
+ "body_nose": {
+  "word": "코",
+  "title": "File:Eyes & Nose 5783.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Eyes_%26_Nose_5783.JPG",
+  "license": "CC BY-SA 3.0",
+  "author": "Biswarup Ganguly"
+ },
+ "body_ear": {
+  "word": "귀",
+  "title": "File:Close up of man's ear 03.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Close_up_of_man%27s_ear_03.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "TONY LU"
+ },
+ "things_ball": {
+  "word": "공",
+  "title": "File:Soccer Ball (27181880724).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Soccer_Ball_(27181880724).jpg",
+  "license": "CC BY 2.0",
+  "author": "USARJ NCO CORPS"
+ },
+ "animals_cow": {
+  "word": "소",
+  "title": "File:A dairy cow in Bemmel.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:A_dairy_cow_in_Bemmel.jpg",
+  "license": "CC0",
+  "author": "Cultureel Gelderland"
+ },
+ "vehicles_plane": {
+  "word": "비행기",
+  "title": "File:Lufthansa Boeing 747-8 D-ABYQ MD1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Lufthansa_Boeing_747-8_D-ABYQ_MD1.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Acroterion"
+ },
+ "things_book": {
+  "word": "책",
+  "title": "File:Aufgeschlagenes Buch -- 2020 -- 4204.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Aufgeschlagenes_Buch_--_2020_--_4204.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Dietmar Rabich"
+ }
+}
