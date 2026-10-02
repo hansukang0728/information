@@ -1,6 +1,6 @@
 {
   "name": "wordcards",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "18개월 이상 아이를 위한 낱말카드 (웹 + 안드로이드)",
   "scripts": {
