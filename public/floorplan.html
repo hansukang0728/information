@@ -120,7 +120,7 @@ room(3100, 7750, 610, 1830, C.white);               // 붙박이장 하
 room(3780, 5960, 3080, 3620, C.bed);                // 침실4
 // 주방 상부
 room(7300, 0, 4580, 700, C.white);                  // 상부 조리대
-room(7300, 700, 700, 2180, C.white);                // 좌측 조리대
+room(7300, 700, 700, 1280, C.white);                // 좌측 조리대
 room(11050, 1950, 830, 2610, C.white);              // 냉장고장(2820/840)
 // 우측 실
 room(11880, 0, 1720, 1950, C.gray);                 // 다용도실
@@ -219,14 +219,20 @@ sink(13450, 3900, 0);
 el('rect', { x:9000, y:120, width:550, height:420, rx:60, ...S }, fx);             // 개수대
 el('circle', { cx:9275, cy:330, r:120, ...S }, fx);
 el('path', { d:'M8400 180H8850M8400 280H8850M8400 380H8850M8400 480H8850', stroke:'#777', 'stroke-width':20 }, fx); // 식기건조대
-[[7650,1350],[7650,1750]].forEach(([cx,cy]) => {                                     // 쿡탑
+[[7650,1100],[7650,1500]].forEach(([cx,cy]) => {                                     // 쿡탑
   el('circle', { cx, cy, r:170, ...S }, fx);
   el('path', { d:`M${cx-90} ${cy-90}L${cx+90} ${cy+90}M${cx+90} ${cy-90}L${cx-90} ${cy+90}`, stroke:'#555', 'stroke-width':20 }, fx);
 });
-el('rect', { x:7300, y:1150, width:700, height:850, fill:'none', stroke:'#555', 'stroke-width':25, rx:80 }, fx);
+el('rect', { x:7300, y:900, width:700, height:850, fill:'none', stroke:'#555', 'stroke-width':25, rx:80 }, fx);
 // 냉장고장·수납
 el('rect', { x:6700, y:3050, width:550, height:1350, ...S }, fx);
 el('rect', { x:15800, y:2150, width:850, height:1500, ...S }, fx);
+
+// 아일랜드 식탁 (2740 × 900) + 스툴
+el('rect', { x:7460, y:1980, width:2740, height:900, fill:'#f4f1ec', stroke:'#111', 'stroke-width':60, rx:40 }, fx);
+el('rect', { x:7560, y:2080, width:2540, height:700, fill:'none', stroke:'#bbb', 'stroke-width':20, rx:30 }, fx);
+el('text', { x:8830, y:2440, class:'room', 'font-size':240, 'font-weight':600 }, fx).textContent = '아일랜드 식탁';
+[8300, 9100, 9900].forEach(cx => el('circle', { cx, cy:3600, r:200, fill:'#fff', stroke:'#555', 'stroke-width':30 }, fx));
 
 /* ---------- 실 이름 ---------- */
 const labels = g();
@@ -235,7 +241,7 @@ function label(x, y, txt, size = 420) {
     el('text', { x, y: y + (i - (arr.length-1)/2) * size * 1.15, class:'room', 'font-size':size }, labels).textContent = line);
 }
 label(5125, 2650, '침실');
-label(9500, 1600, '주방\n식당');
+label(9500, 1250, '주방\n식당');
 label(14965, 2300, '드레스\n룸', 300);
 label(14365, 6450, '침실');
 label(1570, 7700, '침실');
@@ -263,7 +269,7 @@ dim(3930, 965, 3930, 4425, '3460');
 dim(4330, 4400, 6470, 4400, '1800');
 dim(6620, 2880, 6620, 4560, '1775');
 // 주방
-dim(7460, 2780, 10200, 2780, '2740');
+dim(7460, 3200, 10200, 3200, '2740');
 dim(7620, 2880, 7620, 4560, '1900');
 dim(11200, 1950, 11200, 4300, '2820');
 dim(11050, 4380, 11880, 4380, '840');
